@@ -68,7 +68,7 @@ always @(posedge clk) begin
         address_rd = address_rd + 1;
         address = address_rd;
         address_wr = 16'd0;
-        if(address_rd == 3'b010) begin
+        if(wr_data == 3'b010) begin
             adr = adr + 1;
             wr_en = 1'b1;
             rd_en = 1'b0;
